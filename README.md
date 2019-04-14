@@ -1,2 +1,2 @@
-# trending-tools
+# financial-tools
 Tools for Trendings

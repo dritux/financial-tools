@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: python main.py
+    ports:
+     - "8080:8080"
+    volumes:
+     - .:/app
+    links:
+      - db
+    hostname: financial
+    environment:
+      - DEBUG=1
+      - FLASK_ENV=development
+      - FLASK_APP=main.py
+    working_dir: /app
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=dumny
+      - MYSQL_PASSWORD=dumny
+      - MYSQL_DATABASE=financial
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./.docker/db:/docker-entrypoint-initdb.d/:ro
+    hostname: financial
+    restart: always
