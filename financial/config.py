@@ -11,7 +11,7 @@ class Config(object):
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_ECHO = True
-    SQLALCHEMY_DATABASE_URI = "mysql://dumny:dumny@db/trending"
+    SQLALCHEMY_DATABASE_URI = "mysql://dumny:dumny@db/financial"
 
 
 class ProductionConfig(Config):
@@ -32,7 +32,7 @@ class ProductionConfig(Config):
 class TestingConfig(Config):
     DEBUG = True
     SQLALCHEMY_ECHO = True
-    SQLALCHEMY_DATABASE_URI = "mysql://dumny:dumny@0.0.0.0/ereciclar"
+    SQLALCHEMY_DATABASE_URI = "mysql://dumny:dumny@0.0.0.0/financial"
 
 
 config = {

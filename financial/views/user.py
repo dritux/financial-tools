@@ -9,11 +9,8 @@ user = Blueprint('user', __name__, url_prefix='')
 def get():
     users = User.query.all()
 
-    response = jsonify(
-        user=users_schema.dump(users, many=True)
-    )
-
-    return response
+    result = users_schema.dump(users)
+    return jsonify(user=result.data)
 
 
 @user.route('/user', methods=['POST'])
