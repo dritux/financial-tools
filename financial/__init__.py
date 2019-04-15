@@ -18,6 +18,9 @@ def create_app(settings_override={}):
     from financial.views.user import user
     app.register_blueprint(user)
 
+    from financial.views.wallet import wallet
+    app.register_blueprint(wallet)
+
     return app
 
 
