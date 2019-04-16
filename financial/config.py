@@ -6,6 +6,7 @@ class Config(object):
     DEBUG = True if os.environ.get("DEBUG", None) else False
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    ALPHA_API_KEY = os.environ.get("ALPHA_API_KEY", None)
 
 
 class DevelopmentConfig(Config):

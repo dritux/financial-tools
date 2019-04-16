@@ -19,8 +19,7 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements-dev.txt
 
-export FLASK_ENV=development
-export FLASK_APP=main.py
+source .env
 ```
 
 ### Running server
@@ -47,6 +46,7 @@ gcloud app deploy --verbosity=debug
 
 [Google SQL](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/appengine/flexible/cloudsql/)
 [Flexible Python Runtime](https://cloud.google.com/appengine/docs/flexible/python/runtime)
-[bootstrap](https://github.com/dking986/Flask-Bootstrap-Demo)
-[sample](https://github.com/schneiderlars/flask-bootstrap)
-[bootstrap library](https://github.com/schneiderlars/flask-bootstrap)
+[Bootstrap](https://github.com/dking986/Flask-Bootstrap-Demo)
+[Samples](https://github.com/schneiderlars/flask-bootstrap)
+[Bootstrap library](https://github.com/schneiderlars/flask-bootstrap)
+[Alpha Ap Library](https://github.com/RomelTorres/alpha_vantage)
